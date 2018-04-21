@@ -34,10 +34,22 @@ public class RunApp {
         
 //        PEGANDO OS MODIFCADORES
         Class<?> goatClass = Class.forName("concreteclasses.Goat");
+        Class<?> eatingClass = Class.forName("interfaces.Eating");
+        Class<?> animalClass = Class.forName("abstractclass.Animal");
         int goatMod = goatClass.getModifiers();
+        int eatingMod = eatingClass.getModifiers();
+        int animalMod = eatingClass.getModifiers();
         System.out.println(Modifier.isPublic(goatMod));
-        System.out.println(Modifier.is);
+        System.out.println(Modifier.isPublic(eatingMod));
+        System.out.println(Modifier.isPublic(animalMod));
+        System.out.println(Modifier.isAbstract(animalMod));
        
+//        PEGANDO OS PACOTES
+        Object goat2 = new Goat();
+        Class<?> clazz2 = goat.getClass();
+        Package pck = clazz2.getPackage();
+        System.out.println(pck.getName());
+        
         
         
     }
