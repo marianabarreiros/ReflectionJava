@@ -15,6 +15,11 @@ import interfaces.Locomotion;
 public class Goat extends Animal implements Locomotion {
     private String um;
     private String dois;
+    
+    public Goat(){
+ 
+    }
+    
     @Override
     protected String getSound() {
         return "bleat";

@@ -18,7 +18,7 @@ import java.util.Arrays;
  * @author qt
  */
 public class RunApp {
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
 //        DESCOBRIR O NOME DE TODOS OS CAMPOS
         Object person = new Goat();
         Field[] field = person.getClass().getDeclaredFields();
@@ -65,6 +65,22 @@ public class RunApp {
         for(Method m : methods){
             System.out.println(m.getName());
         }
+//        PEGANDO A QUANTIDADE DE CONSTRUTORES DA CLASSE GOAT
+        Constructor<?>[] constructors1 = goatClass.getConstructors();
+        int qtd = constructors1.length;
+        System.out.println(qtd);
+        
+//        PEGANDO A QUANTIDADE DE CONSTRUTORES DA CLASSE BIRD
+        Class<?> birdClass = Class.forName("concreteclasses.Bird");
+        Constructor<?>[] constructorBird = birdClass.getConstructors();
+        System.out.println(constructorBird.length);
+        
+//        CRIANDO NOVAS INSTANCIAS DE BIRD
+//        Constructor<?> cons2 = birdClass.getConstructor(boolean.class);
+//        Constructor<?> cons3 = birdClass.getConstructor(String.class, boolean.class);
+        
+//        System.out.println(cons1);
+        
     }
     
 }
