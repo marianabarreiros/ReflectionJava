@@ -8,6 +8,8 @@ package test;
 import abstractclass.Animal;
 import java.lang.reflect.Field;
 import concreteclasses.Goat;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
@@ -50,8 +52,19 @@ public class RunApp {
         Package pck = clazz2.getPackage();
         System.out.println(pck.getName());
         
+//        PEGANDO OS SUPERCLASSE
+        System.out.println(clazz2.getSuperclass().getSimpleName());
         
+//        PEGANDO OS CONSTRUTORES
+        Constructor<?>[] constructors = clazz2.getConstructors();
+        for(Constructor c : constructors){
+            System.out.println(c.getName());
+        }
         
+        Method[] methods = clazz2.getDeclaredMethods();
+        for(Method m : methods){
+            System.out.println(m.getName());
+        }
     }
     
 }
