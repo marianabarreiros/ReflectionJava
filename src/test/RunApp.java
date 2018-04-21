@@ -36,6 +36,7 @@ public class RunApp {
         Class<?> goatClass = Class.forName("concreteclasses.Goat");
         int goatMod = goatClass.getModifiers();
         System.out.println(Modifier.isPublic(goatMod));
+        System.out.println(Modifier.is);
        
         
         
