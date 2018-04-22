@@ -78,8 +78,8 @@ public class RunApp {
 //        CRIANDO NOVAS INSTANCIAS DE BIRD
 //        Constructor<?> cons2 = birdClass.getConstructor(boolean.class);
 //        Constructor<?> cons3 = birdClass.getConstructor(String.class, boolean.class);
-        
-//        System.out.println(cons1);
+
+//        CRIANDO NOVAS INSTANCIAS DE BIRD  
         
     }
     
